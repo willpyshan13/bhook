@@ -1,34 +1,32 @@
 # ByteHook
 
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
-![](https://img.shields.io/badge/release-1.0.1-red.svg?style=flat)
+![](https://img.shields.io/badge/release-1.0.2-red.svg?style=flat)
 ![](https://img.shields.io/badge/Android-4.1%20--%2012-blue.svg?style=flat)
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a%20%7C%20x86%20%7C%20x86__64-blue.svg?style=flat)
 
 [README 中文版](README.zh-CN.md)
 
-ByteHook is a PLT hook framework for Android app.
+ByteHook is a PLT hook framework for Android app. It provides an overall solution for using PLT hook in Android app, not just replacing addresses.
 
-Most of ByteDance's Android apps use ByteHook as the PLT hook solution online.
-
-> If you have any bug reports, suggestions, or problems. Please communicate with us via GitHub [Issues](https://github.com/bytedance/bhook/issues) or [Discussions](https://github.com/bytedance/bhook/discussions). 😀
+Most of ByteDance's Android apps(including TikTok, Douyin, Toutiao, Xigua Video) use ByteHook as the PLT hook solution in the online environment.
 
 
 ## Features
 
+* Support Android 4.1 - 12 (API level 16 - 31).
+* Support armeabi-v7a, arm64-v8a, x86 and x86_64.
 * Multiple hooks and unhooks for the same function do not conflict with each other.
 * Hook a single, partial or all of the dynamic libraries in the process.
 * Hook the newly loaded dynamic libraries automatically.
 * Avoid recursive-calls and circular-calls between proxy functions automatically.
 * Support unwinding backtrace in proxy function.
-* Support Android 4.1 - 12 (API level 16 - 31). 
-* Support armeabi-v7a, arm64-v8a, x86 and x86_64.
 * MIT licensed.
 
 
 ## Documentation
 
-[ByteHook Documentation](doc)
+[ByteHook Documentation](doc#readme)
 
 
 ## Quick Start
@@ -55,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.bytedance:bytehook:1.0.1'
+    implementation 'com.bytedance:bytehook:1.0.2'
 }
 ```
 
