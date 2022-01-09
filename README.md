@@ -1,13 +1,13 @@
 # bhook
 
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
-![](https://img.shields.io/badge/release-1.0.3-red.svg?style=flat)
+![](https://img.shields.io/badge/release-1.0.4-red.svg?style=flat)
 ![](https://img.shields.io/badge/Android-4.1%20--%2012-blue.svg?style=flat)
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a%20%7C%20x86%20%7C%20x86__64-blue.svg?style=flat)
 
 [README 中文版](README.zh-CN.md)
 
-ByteHook(aka bhook) is a PLT hook framework for Android app. It provides an overall solution for using PLT hook in Android app, not just replacing addresses.
+ByteHook(aka bhook) is a PLT hook framework for Android app. It provides an overall solution for using PLT hook in Android app.
 
 Most of ByteDance's Android apps(including Douyin, Toutiao, Xigua Video) use ByteHook as the PLT hook solution in production.
 
@@ -53,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.bytedance:bytehook:1.0.3'
+    implementation 'com.bytedance:bytehook:1.0.4'
 }
 ```
 
@@ -175,4 +175,10 @@ Notice:
 
 ## License
 
-[MIT License](LICENSE)
+ByteHook is MIT licensed, as found in the [LICENSE](LICENSE) file.
+
+ByteHook uses the following third-party source code:
+
+* [queue.h](bytehook/src/main/cpp/third_party/bsd/queue.h) (BSD 3-Clause License. Copyright (c) 1991, 1993 The Regents of the University of California.)
+* [tree.h](bytehook/src/main/cpp/third_party/bsd/tree.h) (BSD 2-Clause License. Copyright (c) 2002 Niels Provos <provos@citi.umich.edu>)
+* [linux\_syscall\_support.h](bytehook/src/main/cpp/third_party/lss/linux_syscall_support.h) (BSD 3-Clause License. Copyright (c) 2005-2011 Google, Inc.)

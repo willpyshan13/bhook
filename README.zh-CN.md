@@ -1,13 +1,13 @@
 # bhook
 
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
-![](https://img.shields.io/badge/release-1.0.3-red.svg?style=flat)
+![](https://img.shields.io/badge/release-1.0.4-red.svg?style=flat)
 ![](https://img.shields.io/badge/Android-4.1%20--%2012-blue.svg?style=flat)
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a%20%7C%20x86%20%7C%20x86__64-blue.svg?style=flat)
 
 [README English Version](README.md)
 
-ByteHook(aka bhook) 是一个针对 Android app 的 PLT hook 框架。它提供了一套 Android app 使用 PLT hook 的整体方案，而不仅仅是替换地址。
+ByteHook(aka bhook) 是一个针对 Android app 的 PLT hook 框架。它提供了一套 Android app 使用 PLT hook 的整体方案。
 
 字节跳动的大多数 Android app（包括抖音，今日头条，西瓜视频）在线上环境中使用了 ByteHook 作为 PLT hook 方案。
 
@@ -53,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.bytedance:bytehook:1.0.3'
+    implementation 'com.bytedance:bytehook:1.0.4'
 }
 ```
 
@@ -175,4 +175,10 @@ int bytehook_unhook(bytehook_stub_t stub);
 
 ## 许可证
 
-[MIT License](LICENSE)
+ByteHook 使用 [MIT 许可证](LICENSE) 授权。
+
+ByteHook 使用了以下第三方源码：
+
+* [queue.h](bytehook/src/main/cpp/third_party/bsd/queue.h) (BSD 3-Clause License. Copyright (c) 1991, 1993 The Regents of the University of California.)
+* [tree.h](bytehook/src/main/cpp/third_party/bsd/tree.h) (BSD 2-Clause License. Copyright (c) 2002 Niels Provos <provos@citi.umich.edu>)
+* [linux\_syscall\_support.h](bytehook/src/main/cpp/third_party/lss/linux_syscall_support.h) (BSD 3-Clause License. Copyright (c) 2005-2011 Google, Inc.)
