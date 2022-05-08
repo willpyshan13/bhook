@@ -28,6 +28,8 @@ There are 2 main branches:
 
 ## Pull Requests
 
+**If possible, always create an issue first where you can describe your problem or feature request. We can also communicate in this issue. Then you can link to that issue in the pull request.**
+
 Please make sure the following is done when submitting a pull request:
 
 1. Fork the repo and create your branch from `main`.
@@ -38,8 +40,8 @@ Please make sure the following is done when submitting a pull request:
 
 ## Code Style Guide
 
-1. 4 spaces for indentation rather than tabs.
-2. Follow the C code style already in place.
+1. Follow the [.clang-format](.clang-format) for C/Cpp code.
+2. Follow the [checkstyle.xml](checkstyle.xml) for Java code.
 
 
 ## License

@@ -1,15 +1,17 @@
-# bhook
+# ByteHook
 
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
-![](https://img.shields.io/badge/release-1.0.4-red.svg?style=flat)
+![](https://img.shields.io/badge/release-1.0.5-red.svg?style=flat)
 ![](https://img.shields.io/badge/Android-4.1%20--%2012-blue.svg?style=flat)
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a%20%7C%20x86%20%7C%20x86__64-blue.svg?style=flat)
 
 [README 中文版](README.zh-CN.md)
 
-ByteHook(aka bhook) is a PLT hook framework for Android app. It provides an overall solution for using PLT hook in Android app.
+**ByteHook** is an Android PLT hook library which supports armeabi-v7a, arm64-v8a, x86 and x86_64.
 
 Most of ByteDance's Android apps(including Douyin, Toutiao, Xigua Video) use ByteHook as the PLT hook solution in production.
+
+If you need an Android inline hook library, please move to [ShadowHook](https://github.com/bytedance/android-inline-hook).
 
 
 ## Features
@@ -53,7 +55,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.bytedance:bytehook:1.0.4'
+    implementation 'com.bytedance:bytehook:1.0.5'
 }
 ```
 
@@ -170,15 +172,23 @@ Notice:
 
 ## Contributing
 
-[ByteHook Contributing Guide](CONTRIBUTING.md)
+* [Code of Conduct](CODE_OF_CONDUCT.md)
+* [Contributing Guide](CONTRIBUTING.md)
+* [Reporting Security vulnerabilities](SECURITY.md)
 
 
 ## License
 
-ByteHook is MIT licensed, as found in the [LICENSE](LICENSE) file.
+ByteHook is licensed by [MIT License](LICENSE).
 
-ByteHook uses the following third-party source code:
+ByteHook uses the following third-party source code or libraries:
 
-* [queue.h](bytehook/src/main/cpp/third_party/bsd/queue.h) (BSD 3-Clause License. Copyright (c) 1991, 1993 The Regents of the University of California.)
-* [tree.h](bytehook/src/main/cpp/third_party/bsd/tree.h) (BSD 2-Clause License. Copyright (c) 2002 Niels Provos <provos@citi.umich.edu>)
-* [linux\_syscall\_support.h](bytehook/src/main/cpp/third_party/lss/linux_syscall_support.h) (BSD 3-Clause License. Copyright (c) 2005-2011 Google, Inc.)
+* [queue.h](bytehook/src/main/cpp/third_party/bsd/queue.h)  
+  BSD 3-Clause License  
+  Copyright (c) 1991, 1993 The Regents of the University of California.
+* [tree.h](bytehook/src/main/cpp/third_party/bsd/tree.h)  
+  BSD 2-Clause License  
+  Copyright (c) 2002 Niels Provos <provos@citi.umich.edu>
+* [linux-syscall-support](https://chromium.googlesource.com/linux-syscall-support/)  
+  BSD 3-Clause License  
+  Copyright (c) 2005-2011 Google Inc.
